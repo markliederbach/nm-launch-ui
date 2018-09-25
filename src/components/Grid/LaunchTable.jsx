@@ -20,6 +20,7 @@ export class LaunchTable extends Component {
             {launch.est_timestamp}
           </Moment>
         </TableCell>
+        <TableCell>{launch.name}</TableCell>
         <TableCell>
           {launch.missions && launch.missions.length
             ? launch.missions[0].agencies
@@ -27,7 +28,6 @@ export class LaunchTable extends Component {
               : "None Provided"
             : "None provided"}
         </TableCell>
-        <TableCell>{launch.name}</TableCell>
         <TableCell>{launch.location.name}</TableCell>
         <TableCell>{launch.rocket.name}</TableCell>
       </TableRow>
@@ -38,8 +38,8 @@ export class LaunchTable extends Component {
         <TableHeader>
           <TableRow>
             <TableHeaderCell>Date</TableHeaderCell>
-            <TableHeaderCell>Agency</TableHeaderCell>
             <TableHeaderCell>Name</TableHeaderCell>
+            <TableHeaderCell>Agency</TableHeaderCell>
             <TableHeaderCell>Location</TableHeaderCell>
             <TableHeaderCell>Rocket</TableHeaderCell>
           </TableRow>

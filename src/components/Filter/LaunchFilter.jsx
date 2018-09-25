@@ -23,7 +23,7 @@ export class LaunchFilter extends Component {
       <Form>
         <Input
           focus
-          placeholder="Filter by keyword..."
+          placeholder="Filter by name..."
           name="filterValue"
           type="text"
           onChange={this.onChange}

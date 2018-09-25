@@ -1,4 +1,5 @@
 import { observable, computed, action } from "mobx";
+import DOMAINS from "../constants/Domains";
 
 export default class LaunchStore {
   @observable
@@ -7,7 +8,8 @@ export default class LaunchStore {
   @action
   getLaunches = async (params = {}) => {
     let { next, name } = params;
-    let url = "http://localhost:8000/api/v1/launch";
+    let url = `${DOMAINS.backend_api}/launch`;
+
     return await fetch(
       `${url}?next=${next ? next : 15}&name=${name ? name : ""}`
     )
