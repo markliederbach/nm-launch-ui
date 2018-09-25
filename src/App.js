@@ -4,15 +4,8 @@ import { observer } from "mobx-react";
 import LaunchStore from "./stores/LaunchStore";
 import "semantic-ui-css/semantic.min.css";
 import "./css/App.css";
-import {
-  Table,
-  TableHeader,
-  TableRow,
-  TableHeaderCell,
-  TableBody,
-  TableCell,
-  Header
-} from "semantic-ui-react";
+import { Header } from "semantic-ui-react";
+import { LaunchTable } from "./components/Grid/LaunchTable";
 
 @observer
 class App extends Component {
@@ -27,13 +20,6 @@ class App extends Component {
   render() {
     let resultsList = [];
     if (this.state.store.results.launches) {
-      resultsList = this.state.store.results.launches.map((launch, index) => (
-        <TableRow key={index}>
-          <TableCell>{launch.est_timestamp}</TableCell>
-          <TableCell>{launch.location.name}</TableCell>
-          <TableCell>{launch.rocket.name}</TableCell>
-        </TableRow>
-      ));
     }
 
     return (
@@ -43,16 +29,9 @@ class App extends Component {
           <h1 className="App-title">Global Launch Schedule</h1>
         </Header>
         <div className="site-content">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHeaderCell>Date</TableHeaderCell>
-                <TableHeaderCell>Location</TableHeaderCell>
-                <TableHeaderCell>Rocket</TableHeaderCell>
-              </TableRow>
-            </TableHeader>
-            <TableBody>{resultsList}</TableBody>
-          </Table>
+          {this.state.store.results.launches ? (
+            <LaunchTable results={this.state.store.results} />
+          ) : null}
         </div>
       </div>
     );
