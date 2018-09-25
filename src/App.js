@@ -6,6 +6,7 @@ import "semantic-ui-css/semantic.min.css";
 import "./css/App.css";
 import { Header } from "semantic-ui-react";
 import { LaunchTable } from "./components/Grid/LaunchTable";
+import { LaunchFilter } from "./components/Filter/LaunchFilter";
 
 @observer
 class App extends Component {
@@ -18,10 +19,6 @@ class App extends Component {
   }
 
   render() {
-    let resultsList = [];
-    if (this.state.store.results.launches) {
-    }
-
     return (
       <div className="App">
         <Header className="App-header">
@@ -29,6 +26,7 @@ class App extends Component {
           <h1 className="App-title">Global Launch Schedule</h1>
         </Header>
         <div className="site-content">
+          <LaunchFilter onFilter={this.state.store.getLaunches} />
           {this.state.store.results.launches ? (
             <LaunchTable results={this.state.store.results} />
           ) : null}
