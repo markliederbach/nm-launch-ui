@@ -15,7 +15,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    document.title = "NM | Launch Schedule";
     this.state.store.getLaunches();
   }
 
