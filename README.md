@@ -1,3 +1,41 @@
+# Global Launch Schedule UI
+[![Build Status](https://travis-ci.com/markliederbach/nm-launch-ui.svg?branch=master)](https://travis-ci.com/markliederbach/nm-launch-ui)
+
+This is the frontend component of the global launch schedule application. You can run this in conjunction with the backend API.
+
+## To Run Locally
+Simply install the application
+```
+yarn install
+```
+Then run it
+```
+yarn start
+```
+The application will be on localhost:3000, and expects the backend API to run on localhost:8000 (unless specified otherwise using the `REACT_APP_BACKEND_API` environment variable).
+
+## To Run Tests
+If you haven't already, run
+```
+yarn install
+```
+Then simply execute
+```
+yarn test
+```
+
+## To Build the application
+```
+yarn install
+```
+
+```
+yarn build
+```
+
+
+## About Create-React-App
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
