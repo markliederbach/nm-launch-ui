@@ -88,5 +88,3 @@ exports[`LaunchTable renders props correctly 1`] = `
   </tbody>
 </table>
 `;
-
-exports[`LaunchTable renders state correctly 1`] = `null`;
