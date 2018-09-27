@@ -28,8 +28,32 @@ export class LaunchTable extends Component {
               : "None Provided"
             : "None provided"}
         </TableCell>
-        <TableCell>{launch.location.name}</TableCell>
-        <TableCell>{launch.rocket.name}</TableCell>
+        <TableCell>
+          {launch.location.map_url ? (
+            <a
+              href={`${launch.location.map_url}`}
+              target="_blank"
+              rel="noopener"
+            >
+              {launch.location.name}
+            </a>
+          ) : (
+            launch.location.name
+          )}
+        </TableCell>
+        <TableCell>
+          {launch.rocket.info_url ? (
+            <a
+              href={`${launch.rocket.info_url}`}
+              target="_blank"
+              rel="noopener"
+            >
+              {launch.rocket.name}
+            </a>
+          ) : (
+            launch.rocket.name
+          )}
+        </TableCell>
       </TableRow>
     ));
 
@@ -37,7 +61,7 @@ export class LaunchTable extends Component {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHeaderCell>Date</TableHeaderCell>
+            <TableHeaderCell>Time (UTC)</TableHeaderCell>
             <TableHeaderCell>Name</TableHeaderCell>
             <TableHeaderCell>Agency</TableHeaderCell>
             <TableHeaderCell>Location</TableHeaderCell>
