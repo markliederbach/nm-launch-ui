@@ -18,22 +18,3 @@ exports[`LaunchFilter renders correctly 1`] = `
   </div>
 </form>
 `;
-
-exports[`LaunchFilter renders props correctly 1`] = `
-<form
-  className="ui form"
-  onSubmit={[Function]}
->
-  <div
-    className="ui focus input"
-  >
-    <input
-      name="filterValue"
-      onChange={[Function]}
-      onKeyUp={[Function]}
-      placeholder="Filter by name..."
-      type="text"
-    />
-  </div>
-</form>
-`;
