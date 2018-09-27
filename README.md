@@ -1,7 +1,7 @@
 # Global Launch Schedule UI
 [![Build Status](https://travis-ci.com/markliederbach/nm-launch-ui.svg?branch=master)](https://travis-ci.com/markliederbach/nm-launch-ui)
 
-This is the frontend component of the global launch schedule application. You can run this in conjunction with the backend API.
+This is the frontend component of the global launch schedule application. You can run this in conjunction with the [backend API](https://github.com/markliederbach/nm-launch-api).
 
 ## To Run Locally
 Simply install the application
