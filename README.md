@@ -30,6 +30,9 @@ yarn install
 ```
 
 ```
+export REACT_APP_BACKEND_API="https://nmapi.aflux.co/api/v1" # Or wherever you choose to point it
+export PUBLIC_URL="https://nm.aflux.co" # Or wherever you are hosting it
+
 yarn build
 ```
 
