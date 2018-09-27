@@ -10,14 +10,15 @@ configure({ adapter: new Adapter() });
 describe("LaunchTable", function() {
   let defaultProps;
   beforeAll(() => {
-    moment.tz.setDefault("CST");
+    moment.tz.setDefault("UTC");
     defaultProps = {
       results: {
         launches: [
           {
-            est_timestamp: moment("2018-09-27T09:34:00").format(
+            est_timestamp: moment(
+              "2018-09-27T09:34:00",
               "YYYY-MM-DDTHH:mm:ss"
-            ),
+            ).format("YYYY-MM-DDTHH:mm:ss"),
             name: "Some launch name",
             location: {
               name: "location name",
