@@ -7,7 +7,6 @@ import "./css/App.css";
 import { Header } from "semantic-ui-react";
 import { LaunchTable } from "./components/Grid/LaunchTable";
 import { LaunchFilter } from "./components/Filter/LaunchFilter";
-import { Footer } from "./components/Footer";
 
 @observer
 class App extends Component {
