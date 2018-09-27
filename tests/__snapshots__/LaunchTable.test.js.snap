@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LaunchTable renders props correctly 1`] = `
+<table
+  className="ui table"
+>
+  <thead
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <th
+        className=""
+      >
+        Time (UTC)
+      </th>
+      <th
+        className=""
+      >
+        Name
+      </th>
+      <th
+        className=""
+      >
+        Agency
+      </th>
+      <th
+        className=""
+      >
+        Location
+      </th>
+      <th
+        className=""
+      >
+        Rocket
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        <time
+          dateTime={"2018-09-27T14:34:00.000Z"}
+        >
+          Thu Sep 27 2018 9:34AM
+        </time>
+      </td>
+      <td
+        className=""
+      >
+        Some launch name
+      </td>
+      <td
+        className=""
+      >
+        NASA
+      </td>
+      <td
+        className=""
+      >
+        <a
+          href="http://example.com"
+          rel="noopener"
+          target="_blank"
+        >
+          location name
+        </a>
+      </td>
+      <td
+        className=""
+      >
+        <a
+          href="http://example2.com"
+          rel="noopener"
+          target="_blank"
+        >
+          Falcon 9
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`LaunchTable renders state correctly 1`] = `null`;
